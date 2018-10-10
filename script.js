@@ -15,7 +15,8 @@ const tablero = document.querySelectorAll(".nuevaTabla div");
 
 // Variables del juego
 let hayGanador = false;
-let turno = "O";
+let ganador = null;
+let turno = "X";
 
 // Todas las combinaciones que, si son iguales, ganan la partida
 arriba = [A1,A2,A3];
@@ -38,16 +39,18 @@ function nuevoJuego() {
 	tablero.forEach(casilla => casilla.innerText = "");
 	hayGanador = false;
 	turno = "O";
+    document.querySelector("#ganador").innerText = "";
+    ganador = null;
 }
 
 // Comprueba que aún no se ha jugado esa casilla y pone la ficha que toque (X o O)
 function ponerFicha() {
 	if((this.innerText === "") && (!hayGanador)) {
 		if (turno === "X") {
-			this.innerText = "O";
+			this.innerText = "X";
 			turno = "O";
 		} else {
-			this.innerText = "X";
+			this.innerText = "O";
 			turno = "X";
 		}
 		document.querySelector("#turno").innerText = turno;
@@ -55,8 +58,7 @@ function ponerFicha() {
 
 		console.log(hayGanador);
 		if(hayGanador) {
-			console.log("has ganado! eres un campeón!");
-			document.querySelector("#ganador").innerText = "Ha ganado X!";
+			document.querySelector("#ganador").innerText = `Ha ganado ${ganador}!`;
 		}
 	}
 }
@@ -69,9 +71,13 @@ function comprobarGanador() {
 			bote.push(elemento.innerText);
 		});
 
-		if((bote.every(comprobarGanadorX)) || (bote.every(comprobarGanadorO))) {
-			hayGanador = true;
-		}
+		if(bote.every(comprobarGanadorX)) {
+           hayGanador = true;
+           ganador = "X";
+        } else if (bote.every(comprobarGanadorO)){
+            hayGanador = true;
+            ganador = "O";
+        }
 	});
 }
 

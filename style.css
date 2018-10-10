@@ -5,12 +5,22 @@ html * {
 
 body {
 	font-family: Arial, sans-serif;	
-	background-color: #669999;
+	background-image: linear-gradient(#990073,#ff80df);
+    height: 100vh;
 }
 
 header {
-	background-color: #008080;
-	height: 100px;
+    border-bottom: 2px solid white;
+}
+
+header h1 {
+    font-family: 'Raleway', sans-serif;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    font-size: 50px;
 }
 
 .contenedor {
@@ -18,15 +28,9 @@ header {
 	margin: 0 auto;
 }
 
-header h1 {
-	color: white;
-	text-align: center;
-	text-transform: uppercase;
-	line-height: 100px;
-}
-
 .nuevaTabla {
 	margin: 50px auto;
+    margin-bottom: 15px;
 	font-size: 60px;
 	width: 300px;
 	height: 300px;
@@ -37,7 +41,38 @@ header h1 {
 }
 
 .nuevaTabla div {
+    font-family: 'Indie Flower', cursive;
+    font-size: 110px;
 	border: 1px dashed #cccccc;
 	text-align: center;
 	line-height: 100px;
+    text-shadow: 0px 4px 6px rgba(0,0,0,0.2)
+}
+
+.contenedor p {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 25px;
+    color: #444;
+}
+
+#nuevo-juego {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+    display: block;
+    margin: 50px auto;
+    background-image: linear-gradient(#008CBA, #008CBA);
+    color: white;
+    border-style: none;
+    padding: 10px 15px;
+    box-shadow: 5px 5px 3px rgba(0,0,0,0.3);
+    border-radius: 5px;
+}
+
+#ganador {
+    height: 50px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    font-size: 2.5em;
 }
