@@ -1,0 +1,43 @@
+html * {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, sans-serif;	
+	background-color: #669999;
+}
+
+header {
+	background-color: #008080;
+	height: 100px;
+}
+
+.contenedor {
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+header h1 {
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 100px;
+}
+
+.nuevaTabla {
+	margin: 50px auto;
+	font-size: 60px;
+	width: 300px;
+	height: 300px;
+	background-color: white;
+	display: grid;
+	grid-template-columns: 100px 100px 100px;
+	grid-template-rows: 100px 100px 100px;
+}
+
+.nuevaTabla div {
+	border: 1px dashed #cccccc;
+	text-align: center;
+	line-height: 100px;
+}
