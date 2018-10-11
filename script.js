@@ -38,7 +38,8 @@ boton = document.querySelector("#nuevo-juego");
 function nuevoJuego() {
 	tablero.forEach(casilla => casilla.innerText = "");
 	hayGanador = false;
-	turno = "O";
+	turno = "X";
+    document.querySelector("#turno").innerText = turno;
     document.querySelector("#ganador").innerText = "";
     ganador = null;
 }
@@ -56,7 +57,6 @@ function ponerFicha() {
 		document.querySelector("#turno").innerText = turno;
 		comprobarGanador();
 
-		console.log(hayGanador);
 		if(hayGanador) {
 			document.querySelector("#ganador").innerText = `Ha ganado ${ganador}!`;
 		}
